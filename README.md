@@ -1,0 +1,1 @@
+# AI-SCHOOL-7_cool
