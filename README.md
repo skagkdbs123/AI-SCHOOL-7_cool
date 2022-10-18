@@ -13,5 +13,5 @@
 4. 파일 생성하기
 5. 마크다운 파일 편집하기
 
-<img src=C:\awe>
+<img src=C:\awe> 웹페이지 사진링크는 이런식으로 가능
 # Streamlit
