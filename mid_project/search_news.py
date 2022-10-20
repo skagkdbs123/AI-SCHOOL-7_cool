@@ -29,7 +29,7 @@ def Naver_news(keyword):
 naver = Naver_news(keyword)
 num=1
 for i in naver:
-    with st.expander(keyword+" 검색결과"+num):
+    with st.expander(f'{keyword}'+' 검색결과'+f'{num}'):
         components.iframe(f"{i}",width=600, height=400, scrolling=True)
     num+=1
 print(Naver_news(keyword))
