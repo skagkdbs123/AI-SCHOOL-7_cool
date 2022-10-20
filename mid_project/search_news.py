@@ -27,7 +27,9 @@ def Naver_news(keyword):
         top_page_url.remove('#')
     return top_page_url
 naver = Naver_news(keyword)
-
+num=1
 for i in naver:
-    components.iframe(f"{i}",width=800, height=1200, scrolling=True)
+    with st.expander(keyword+" 검색결과"+num):
+        components.iframe(f"{i}",width=600, height=400, scrolling=True)
+    num+=1
 print(Naver_news(keyword))
