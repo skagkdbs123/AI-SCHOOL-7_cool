@@ -5,7 +5,7 @@ import time
 import threading
 import pandas as pd
 import streamlit as st
-import streamlit.components.v1 as components
+from streamlit_embedcode import github_gist()
 # keyword =input("키워드 : ")
 keyword = '비자'
 def Naver_news(keyword):
