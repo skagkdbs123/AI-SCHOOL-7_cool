@@ -5,7 +5,7 @@ import time
 import threading
 import pandas as pd
 import streamlit as st
-from streamlit_embedcode import github_gist()
+import streamlit.components.v1 as components
 # keyword =input("키워드 : ")
 keyword = '비자'
 def Naver_news(keyword):
@@ -22,7 +22,7 @@ def Naver_news(keyword):
 
     for href in soup.find("ul", class_="list_news").find_all("li"):
         temp = href.find("a")["href"]
-        top_page_url.append(temp)
+        top_page_url.append(temp+"/embed")
     while '#' in top_page_url:
         top_page_url.remove('#')
     return top_page_url
@@ -33,6 +33,6 @@ st.sidebar.write("hoog")
 for i in naver:
 #     components.iframe(f"{i}"+"/embed",width=800, height=300, scrolling=False)
     with st.expander(f'{keyword}'+' 검색결과'+f'{num}'):
-        github_gist(f"{i}"+"/embed",width=1200, height=900)
+        st.components.v1.iframe(f"{i}",width=1200, height=900, scrolling=False)
     num+=1
 print(Naver_news(keyword))
