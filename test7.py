@@ -4,7 +4,7 @@ i = ['https://www.yna.co.kr/view/AKR20221021118000004?input=1195m', 'https://www
 k = [0,1,2,3,4,5,6,7,8,9]
 # dic = { name:value for name, value in zip(k,i)}
 
-option = st.selectbox(k)
+option = st.selectbox('gogo',k)
 
 if k==1:
     components.iframe(i[k],width=800, height=1200, scrolling=True)
