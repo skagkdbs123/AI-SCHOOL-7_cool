@@ -7,7 +7,7 @@ import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
 # keyword =input("키워드 : ")
-keyword = '금'
+keyword = '비자'
 def Naver_news(keyword):
     top_page_url = []
     enctext = urllib.parse.quote(keyword)
@@ -26,6 +26,7 @@ def Naver_news(keyword):
     while '#' in top_page_url:
         top_page_url.remove('#')
     return top_page_url
+
 naver = Naver_news(keyword)
 num=1
 st.sidebar.write("hoog")
