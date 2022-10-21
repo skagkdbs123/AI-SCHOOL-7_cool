@@ -8,3 +8,4 @@ matplotlib
 koreanize_matplotlib
 bs4
 requests
+streamlit-embedcode
