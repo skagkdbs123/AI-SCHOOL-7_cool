@@ -28,8 +28,10 @@ def Naver_news(keyword):
     return top_page_url
 naver = Naver_news(keyword)
 num=1
+with st.sidebar:
+    st.[element_name]
 for i in naver:
-    components.iframe(f"{i}",width=800, height=300, scrolling=False)
+#     components.iframe(f"{i}",width=800, height=300, scrolling=False)
     with st.expander(f'{keyword}'+' 검색결과'+f'{num}'):
         components.iframe(f"{i}",width=1200, height=900, scrolling=True)
     num+=1
