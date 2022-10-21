@@ -22,7 +22,7 @@ def Naver_news(keyword):
 
     for href in soup.find("ul", class_="list_news").find_all("li"):
         temp = href.find("a")["href"]
-        top_page_url.append(temp+"/embed")
+        top_page_url.append(temp)
     while '#' in top_page_url:
         top_page_url.remove('#')
     return top_page_url
