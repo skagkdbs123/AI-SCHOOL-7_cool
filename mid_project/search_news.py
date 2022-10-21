@@ -30,8 +30,8 @@ naver = Naver_news(keyword)
 num=1
 st.sidebar.write("hoog")
 for i in naver:
-#     components.iframe(f"{i}",width=800, height=300, scrolling=False)
+#     components.iframe(f"{i}"+"/embed",width=800, height=300, scrolling=False)
     with st.expander(f'{keyword}'+' 검색결과'+f'{num}'):
-        components.iframe(f"{i}",width=1200, height=900, scrolling=True)
+        components.iframe(f"{i}"+"/embed",width=1200, height=900, scrolling=True)
     num+=1
 print(Naver_news(keyword))
