@@ -10,11 +10,9 @@ import streamlit.components.v1 as components
 
 
 title = st.text_input('검색할 키워를 입력하세요')
-st.write('The current movie title is', title)
 
 keyword = title
 
-naver = Naver_news(keyword)
 def Naver_news(keyword):
     
     top_page_url = []
@@ -33,7 +31,7 @@ def Naver_news(keyword):
         top_page_url.append(temp)
         
     return top_page_url
-
+naver = Naver_news(keyword)
 num=1
 
 for i in naver:
