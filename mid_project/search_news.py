@@ -49,9 +49,9 @@ def Naver_news(keyword):
 # dic = { name:value for name, value in zip(number_list,i)}
 
 naver = Naver_news(keyword)
-st.title('헤헤 뉴스당')
 num=1
-option = st.selectbox(
-    for i in naver:
+for i in naver:
+    with st.expander(f'{keyword}'+' 검색결과'+f'{num}'):
         components.iframe(f"{i}",width=800, height=1200, scrolling=True)
+    num+=1
 )
