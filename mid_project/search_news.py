@@ -19,7 +19,7 @@ def set_bg_hack_url():
          """,
          unsafe_allow_html=True
      )
-set_bg_hack_url()
+# set_bg_hack_url()
 
 keyword = st.text_input('검색할 키워를 입력하세요')
 
