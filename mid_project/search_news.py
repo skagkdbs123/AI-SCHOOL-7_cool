@@ -7,7 +7,7 @@ import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
 # keyword =input("키워드 : ")
-keyword = '키워드'
+keyword = '달러'
 def Naver_news(keyword):
     top_page_url = []
     enctext = urllib.parse.quote(keyword)
