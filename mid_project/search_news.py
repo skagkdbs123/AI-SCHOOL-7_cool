@@ -29,7 +29,5 @@ def Naver_news(keyword):
 
 naver = Naver_news(keyword)
 num=1
-st.sidebar.write("hoog")
 for i in naver:
     st.components.v1.iframe(f"{i}",width=1200, height=900, scrolling=False)
-print(Naver_news(keyword))
