@@ -7,15 +7,19 @@ import threading
 import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
-st.markdown(
-   f”””
-   <style>
-   p {
-   background-image: url(‘img_file.jpg’);
-   }
-   </style>
-   ”””,
-   unsafe_allow_html=True)
+def set_bg_hack_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background: url("https://images.pexels.com/photos/342945/pexels-photo-342945.jpeg");
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+set_bg_hack_url()
 
 keyword = st.text_input('검색할 키워를 입력하세요')
 
