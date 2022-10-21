@@ -7,8 +7,14 @@ import threading
 import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
-# keyword =input("키워드 : ")
-keyword = '달러'
+
+
+title = st.text_input('검색할 키워를 입력하세요')
+st.write('The current movie title is', title)
+
+keyword = title
+
+naver = Naver_news(keyword)
 def Naver_news(keyword):
     
     top_page_url = []
@@ -28,10 +34,10 @@ def Naver_news(keyword):
         
     return top_page_url
 
-naver = Naver_news(keyword)
 num=1
+
 for i in naver:
     with st.expander(f'{keyword}'+' 검색결과'+f'{num}'):
-        if st.empty()==False:
+            st.write('You selected:', option)
             components.iframe(f"{i}",width=800, height=1200, scrolling=True)
     num+=1
