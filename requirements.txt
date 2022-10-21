@@ -9,3 +9,4 @@ koreanize_matplotlib
 bs4
 requests
 streamlit-embedcode
+streamlit-component-lib
