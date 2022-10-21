@@ -29,5 +29,8 @@ def Naver_news(keyword):
 
 naver = Naver_news(keyword)
 num=1
-for i in naver:
-    st.components.v1.iframe(f"{i}",width=1200, height=900, scrolling=False)
+# st.sidebar.write("hoog")
+with st.expander(f'{keyword}'+' 검색결과'+f'{num}'):
+    for i in naver:
+        components.iframe(f"{i}"+"/embed",width=1200, height=900, scrolling=True)
+        num+=1
