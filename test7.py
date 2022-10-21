@@ -6,4 +6,4 @@ option = st.selectbox(
     'How would you like to be contacted?',
     ('Email', 'Home phone', 'Mobile phone'))
 
-components.iframe("https://docs.streamlit.io/library/api-reference",width=800, height=1200, scrolling=True)
+components.iframe("https://m.khan.co.kr/?tab=home",width=800, height=1200, scrolling=True)
