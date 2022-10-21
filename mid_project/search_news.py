@@ -42,10 +42,11 @@ def Naver_news(keyword):
         top_page_url.append(temp)
         
     return top_page_url
-def show_page():
-    for i in naver:
-        components.iframe(f"{i}",width=800, height=1200, scrolling=True)
-number_list=[1,2,3,4,5,6,7,8,9,10]
+# def show_page(i):
+#     components.iframe(f"{i}",width=800, height=1200, scrolling=True)
+# number_list=[1,2,3,4,5,6,7,8,9,10]
+
+# dic = { name:value for name, value in zip(number_list,i)}
 
 naver = Naver_news(keyword)
 st.title('헤헤 뉴스당')
