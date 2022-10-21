@@ -44,8 +44,8 @@ def Naver_news(keyword):
 naver = Naver_news(keyword)
 st.title('헤헤 뉴스당')
 num=1
-with st.expander('헤헤 검색결과당'):
+with st.expander(f'{keyword}'+' 검색결과'+f'{num}'):
     for i in naver:
-        with st.expander(f'{keyword}'+' 검색결과'+f'{num}'):
+        with st.container():
             components.iframe(f"{i}",width=800, height=1200, scrolling=True)
-    num+=1
+        num+=1
