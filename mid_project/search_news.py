@@ -7,6 +7,7 @@ import threading
 import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
+
 def set_bg_hack_url():
     st.markdown(
          f"""
@@ -21,7 +22,7 @@ def set_bg_hack_url():
      )
 # set_bg_hack_url()
 
-keyword = st.text_input('검색할 키워를 입력하세요')
+keyword = st.text_input('검색할 키워드를 입력하세요')
 
 def Naver_news(keyword):
     
@@ -41,11 +42,15 @@ def Naver_news(keyword):
         top_page_url.append(temp)
         
     return top_page_url
+def show_page():
+    for i in naver:
+        components.iframe(f"{i}",width=800, height=1200, scrolling=True)
+number_list=[1,2,3,4,5,6,7,8,9,10]
+
 naver = Naver_news(keyword)
 st.title('헤헤 뉴스당')
 num=1
-with st.expander(f'{keyword}'+' 검색결과'+f'{num}'):
+option = st.selectbox(
     for i in naver:
-        with st.container():
-            components.iframe(f"{i}",width=800, height=1200, scrolling=True)
-        num+=1
+        components.iframe(f"{i}",width=800, height=1200, scrolling=True)
+)
