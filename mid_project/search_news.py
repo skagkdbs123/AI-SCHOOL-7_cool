@@ -2,9 +2,6 @@ import urllib.request
 import requests
 from bs4 import BeautifulSoup as bs
 import re
-import time
-import threading
-import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
 
@@ -20,7 +17,7 @@ def set_bg_hack_url():
          """,
          unsafe_allow_html=True
      )
-# set_bg_hack_url()
+set_bg_hack_url()
 
 def Naver_news(keyword):
     
@@ -54,11 +51,6 @@ def Naver_title(keyword):
         real_title.append(item.text)
         
     return real_title
-# def show_page(i):
-#     components.iframe(f"{i}",width=800, height=1200, scrolling=True)
-# number_list=[1,2,3,4,5,6,7,8,9,10]
-
-# dic = { name:value for name, value in zip(number_list,i)}
 
 keyword = st.text_input('검색할 키워드를 입력하세요')
 
