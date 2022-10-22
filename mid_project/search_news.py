@@ -10,7 +10,7 @@ def set_bg_hack_url():
          f"""
          <style>
          .stApp {{
-             background: url("https://images.pexels.com/photos/342945/pexels-photo-342945.jpeg");
+             background: url("https://images.pexels.com/photos/321464/pexels-photo-321464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
              background-size: cover
          }}
          </style>
@@ -68,7 +68,7 @@ try:
             selected = st.selectbox('check one',options = [t for t in k])
 
             selected_link = link_dict[selected]
-            components.iframe(selected_link, width=800, height=1200, scrolling=True)
+            components.iframe(selected_link, width=700, height=1200, scrolling=True)
         st.success('Done!')
 except AttributeError:
     pass
