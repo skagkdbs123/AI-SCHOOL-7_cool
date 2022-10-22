@@ -8,4 +8,4 @@ selected = st.selectbox('check one',options = [t for t in k])
 
 selected_link = link_dict[selected]
 
-# components.iframe(i[k],width=800, height=1200, scrolling=True)
+components.iframe(selected_link, width=800, height=1200, scrolling=True)
