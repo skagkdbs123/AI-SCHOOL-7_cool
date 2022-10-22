@@ -7,5 +7,5 @@ link_dict = { name:value for name, value in zip(k,i)}
 selected = st.selectbox('check one',options = [t for t in k])
 
 selected_link = link_dict[selected]
-if sel
-components.iframe(i[k],width=800, height=1200, scrolling=True)
+
+# components.iframe(i[k],width=800, height=1200, scrolling=True)
