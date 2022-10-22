@@ -65,13 +65,12 @@ try:
             k = naver_main #여기엔 숫자대신 제목이 들어갈 예정
             link_dict = { name:value for name, value in zip(k,i)}
 
-            selected = st.selectbox('check one',options = [t for t in k],label_visibility="invisible")
+            selected = st.selectbox(' ',options = [t for t in k])
 
             selected_link = link_dict[selected]
             
-            if st.button('이걸 보려면 클릭하라우 동무'):
+            if st.button('뉴스를 보려면 클릭하세요'):
                 components.iframe(selected_link, width=700, height=1200, scrolling=True)
-                st.write('왜 요딴걸 선택했간?')
                 
         st.success('Done!')
         
