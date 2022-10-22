@@ -57,18 +57,17 @@ keyword = st.text_input('검색할 키워드를 입력하세요')
 try:
     
     if type(keyword) == str:
-        
-        naver_link = Naver_news(keyword)
-        naver_main = Naver_title(keyword)
-        num=1
-        i = naver_link
-        k = naver_main #여기엔 숫자대신 제목이 들어갈 예정
-        link_dict = { name:value for name, value in zip(k,i)}
-
-        selected = st.selectbox('check one',options = [t for t in k])
-
-        selected_link = link_dict[selected]
         with st.spinner('Wait for it...'):
+            naver_link = Naver_news(keyword)
+            naver_main = Naver_title(keyword)
+            num=1
+            i = naver_link
+            k = naver_main #여기엔 숫자대신 제목이 들어갈 예정
+            link_dict = { name:value for name, value in zip(k,i)}
+
+            selected = st.selectbox('check one',options = [t for t in k])
+
+            selected_link = link_dict[selected]
             components.iframe(selected_link, width=800, height=1200, scrolling=True)
         st.success('Done!')
 except AttributeError:
