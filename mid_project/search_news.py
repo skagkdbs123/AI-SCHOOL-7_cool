@@ -65,7 +65,7 @@ try:
             k = naver_main #여기엔 숫자대신 제목이 들어갈 예정
             link_dict = { name:value for name, value in zip(k,i)}
 
-            selected = st.selectbox('check one',options = [t for t in k])
+            selected = st.selectbox('check one',options = [t for t in k],label_visibility="invisible")
 
             selected_link = link_dict[selected]
             
