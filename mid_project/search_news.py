@@ -57,7 +57,7 @@ keyword = st.text_input('검색할 키워드를 입력하세요')
 try:
     
     if type(keyword) == str:
-
+        
         naver_link = Naver_news(keyword)
         naver_main = Naver_title(keyword)
         num=1
@@ -68,8 +68,8 @@ try:
         selected = st.selectbox('check one',options = [t for t in k])
 
         selected_link = link_dict[selected]
-
-        components.iframe(selected_link, width=800, height=1200, scrolling=True)
-        
+        with st.spinner('Wait for it...'):
+            components.iframe(selected_link, width=800, height=1200, scrolling=True)
+        st.success('Done!')
 except AttributeError:
     pass
